@@ -44,7 +44,7 @@ Please enter the device name (example: IR-Keyboard)
 IR-Keyboard
 
 Please enter the input device path (example: /dev/input/event6)
-/dev/input/by-path/platform-1f02000.s_cir-event-kbd
+/dev/input/event6
 
 Please enter the name for the button (or press <ENTER> to complete the setting)
 KEY_ENTER
@@ -111,7 +111,7 @@ Please enter the name for the button (or press <ENTER> to complete the setting)
 New config file saved to: /etc/virtual_input.conf
 ^Croot@OrangePi:/usr/src/test/virtual_input-master# cat /etc/virtual_input.conf
 name IR-Keyboard
-input /dev/input/by-path/platform-1f02000.s_cir-event-kbd
+input /dev/input/event6
 begin codes
   KEY_POWER            0x00000000
   KEY_PLAYPAUSE        0x00000002
@@ -129,7 +129,7 @@ root@OrangePi:/usr/src/test/virtual_input-master# echo "KEY_OK  0x000000FF" >> /
 root@OrangePi:/usr/src/test/virtual_input-master# echo "end codes fake" >> /etc/virtual_input.conf
 root@OrangePi:/usr/src/test/virtual_input-master# cat /etc/virtual_input.conf
 name IR-Keyboard
-input /dev/input/by-path/platform-1f02000.s_cir-event-kbd
+input /dev/input/event6
 begin codes
   KEY_POWER            0x00000000
   KEY_PLAYPAUSE        0x00000002
