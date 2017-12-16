@@ -1,0 +1,13 @@
+[Unit]
+Description = Virtual Input Device for sunxi IR and kodi
+Before = kodi.target
+
+[Service]
+User = root
+Group = root
+Type = oneshot
+Environment="TERM=linux"
+ExecStart = /opt/virtual_input/virtual_input --config /etc/virtual_input.conf
+
+[Install]
+WantedBy = multi-user.target
