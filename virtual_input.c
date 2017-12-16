@@ -867,12 +867,12 @@ open_input_device:
 			fprintf(stdout, "***********************************************\n");
 			fprintf(stdout, "  This device is grabbed by another process.\n");
 			fprintf(stdout, "  No events are available to %s while the\n"
-							"  other grab is active.\n");
+							"  other grab is active.\n", config.input);
 			fprintf(stdout, "  In most cases, this is caused by an X driver,\n"
 							"  try VT-switching and re-run evtest again.\n");
 			fprintf(stdout, "  Run the following command to see processes with\n"
 							"  an open fd on this device\n"
-							" \"fuser -v %s\"\n", argv[0], config.input);
+							" \"fuser -v %s\"\n", argv[0]);
 			fprintf(stdout, "***********************************************\n");
 		}
 	}
